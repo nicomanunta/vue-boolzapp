@@ -5,6 +5,7 @@
 }
 body{
     background-image: linear-gradient(to bottom, rgba(0,150,136,255) 20vh, rgba(219,219,211,255) 20vh);
+    overflow: hidden;
 }
 .altezza-vh{
     height: 100vh;
