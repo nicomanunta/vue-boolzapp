@@ -49,6 +49,25 @@
                                 </div>
 
                             </div>
+                            <div class="row bg-color-bianco">
+                                
+                                    <ul class="w-100 list-group list-group-flush padding-0">
+                                        <li v-for="(name, index) in contacts" :key="index" class="list-group-item d-flex">
+                                            <div class="col-2 ">
+                                                <div>
+                                                    <img class="w-75 immagine-utente" :src="name.avatar" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-10 ">
+                                                <div>
+                                                    <span class="align-middle"></span> <br>
+                                                    <span class="messaggio-sidebar align-middle"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                
+                            </div>
                         </div>
                         <div class="col-7 b">
                            

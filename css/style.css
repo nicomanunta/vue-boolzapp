@@ -14,7 +14,7 @@ body{
 }
 
 .a{
-    background-color: yellow;
+    background-color: white;
 }
 .b{
     background-color: red;
@@ -50,6 +50,13 @@ body{
 }
 .radius-0{
     border-radius: 0px;
+}
+.messaggio-sidebar{
+    font-size: 12px;
+    color: grey;
+}
+.padding-0{
+   padding: 0;
 }
 
 
