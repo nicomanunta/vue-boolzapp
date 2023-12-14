@@ -30,4 +30,18 @@ body{
     background-color: rgba(234,234,234,255);
     
 }
+.bg-color-celeste{
+    background-color: rgba(142,218,252,255);
+}
+.campanella{
+    background-color: white;
+    border-radius: 60px;
+    padding: 14px 12px;
+    font-size: 20px;
+}
+.notifiche-desktop{
+    color: grey;
+    text-decoration: underline;
+    font-size: 12px;
+}
 
