@@ -17,7 +17,7 @@ body{
     background-color: white;
 }
 .b{
-    background-color: red;
+    background-image:url("../img/mine.jpg");
 }
 .altezza-fissa{
    height: 90%;
@@ -71,6 +71,21 @@ li:hover{
 #margin-0{
     margin: 0;
 }
+.smile-mic{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
