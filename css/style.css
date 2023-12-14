@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: linear-gradient(to bottom, rgba(0,150,136,255) 20vh, rgba(219,219,211,255) 20vh);
+}
+.altezza-vh{
+    height: 100vh;
+                              
+}
+
+/* MAIN */
+.a{
+    background-color: yellow;
+}
+.b{
+    background-color: red;
+}
+.altezza-fissa{
+   height: 90%;
+}
+
