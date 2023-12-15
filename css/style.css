@@ -86,7 +86,7 @@ li:hover{
     float: right;
     background-color: rgba(214,249,187,255);
     padding: 10px;
-    padding-right: 40px;
+    padding-right: 50px;
     border-radius: 10px;
     max-width: 45%;
     
@@ -97,7 +97,7 @@ li:hover{
     float: left;
     background-color: white;
     padding: 10px;
-    padding-right: 40px;
+    padding-right: 50px;
     border-radius: 10px;
     max-width: 45%;
     

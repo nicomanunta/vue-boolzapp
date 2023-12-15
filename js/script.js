@@ -3,6 +3,8 @@ let { createApp } = Vue
 createApp({
     data(){
         return{
+            
+            newMessage: "",
             activeChat: 0,
             contacts: [
                 {
@@ -174,5 +176,23 @@ createApp({
         selectChat(index){
             this.activeChat = index
         },
+        sentMessage(){
+            this.contacts[this.activeChat].messages.push({
+                date: '',
+                message: this.newMessage,
+                status: 'sent' 
+            })
+            this.newMessage = "" 
+             
+        },
+        receivedMessage(){
+            setTimeout(function(){
+                this.contacts[this.activeChat].messages.push({
+                    date: '',
+                    message: "ok",
+                    status: 'received' 
+                }) 
+            },1000)  
+        }
     }
 }).mount("#app")
