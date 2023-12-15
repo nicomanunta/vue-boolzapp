@@ -82,8 +82,8 @@ li:hover{
     width: 100%;
 }
 .inviato{ 
-    position: relative;
-    left: 400px;
+    clear: both;
+    float: right;
     background-color: rgba(214,249,187,255);
     padding: 10px;
     padding-right: 40px;
@@ -93,6 +93,7 @@ li:hover{
 }
 
 .ricevuto{
+    clear: both;
     float: left;
     background-color: white;
     padding: 10px;
@@ -101,3 +102,4 @@ li:hover{
     max-width: 45%;
     
 }
+

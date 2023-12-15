@@ -51,9 +51,8 @@
 
                             </div>
                             <div class="row bg-color-bianco">
-                                
                                     <ul class="w-100 list-group list-group-flush padding-0">
-                                        <li v-for="(contact, index) in contacts" :key="index" class="list-group-item d-flex">
+                                        <li @click="selectChat(index)" v-for="(contact, index) in contacts" :key="index" class="list-group-item d-flex">
                                             <div class="col-2 ">
                                                 <div>
                                                     <img class="w-75 immagine-utente" :src="contact.avatar" alt="">
@@ -67,7 +66,6 @@
                                             </div>
                                         </li>
                                     </ul>
-                                
                             </div>
                         </div>
                         <!-- pagina destra -->
@@ -100,7 +98,7 @@
                             <div class="row">
                                 <div class="col-12 mt-5  ">
                                     <!--v-for="contact, index in contacts" :class="contact.messages[0].message == sent ? 'inviato' : 'ricevuto' -->
-                                    <div class="mb-3" v-for="message, index in contacts[0].messages" :class="message.status == 'sent' ? 'inviato' : 'ricevuto' ">
+                                    <div class="mb-3" v-for="message, index in contacts[activeChat].messages" :class="message.status == 'sent' ? 'inviato' : 'ricevuto' ">
                                         <span >{{message.message}}</span>
                                     </div>
                                     
