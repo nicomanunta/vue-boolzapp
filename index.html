@@ -46,13 +46,13 @@
                             <div class="row bg-color-bianco">
                                 <div class="col-12 input-group my-1">
                                     <span class="bg-color-bianco radius-0 px-4 input-group-text" id="basic-addon1"><i class=" fa-solid fa-magnifying-glass" style="color: rgba(177,177,177,255);"></i></span>
-                                    <input type="text" class="radius-0 form-control" placeholder="Cerca o inizia una nuova chat"  aria-describedby="basic-addon1">
+                                    <input type="text" class="radius-0 form-control" placeholder="Cerca o inizia una nuova chat"  aria-describedby="basic-addon1" v-model="search" @keyup="searchChat()">
                                 </div>
 
                             </div>
                             <div class="row bg-color-bianco">
-                                    <ul class="w-100 list-group list-group-flush padding-0">
-                                        <li @click="selectChat(index)" v-for="(contact, index) in contacts" :key="index" class="list-group-item d-flex">
+                                    <ul class="w-100 list-group list-group-flush padding-0 ">
+                                        <li v-show="contact.visible" @click="selectChat(index)" v-for="(contact, index) in contacts" :key="index" class="list-group-item d-flex">
                                             <div class="col-2 ">
                                                 <div>
                                                     <img class="w-75 immagine-utente" :src="contact.avatar" alt="">
@@ -100,6 +100,9 @@
                                     <!--v-for="contact, index in contacts" :class="contact.messages[0].message == sent ? 'inviato' : 'ricevuto' -->
                                     <div class="mb-3" v-for="message, index in contacts[activeChat].messages" :class="message.status == 'sent' ? 'inviato' : 'ricevuto' ">
                                         <span >{{message.message}}</span>
+                                        <div>
+                                            {{message.time[1]}}
+                                        </div>
                                     </div>
                                     
                                 </div>
