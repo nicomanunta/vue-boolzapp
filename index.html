@@ -71,7 +71,7 @@
                             </div>
                         </div>
                         <!-- pagina destra -->
-                        <div class="col-7 b">
+                        <div class="col-7 b ">
                             <div class="row bg-color-grigio py-1 altezza">
                                 <div class="col-6 altezza">
                                     <div class="row">
@@ -94,7 +94,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row bg-color-grigio ">
+
+
+                            <!-- Chat -->
+                            <div class="row">
+                                <div class="col-12 mt-5  ">
+                                    <!--v-for="contact, index in contacts" :class="contact.messages[0].message == sent ? 'inviato' : 'ricevuto' -->
+                                    <div class="mb-3" v-for="message, index in contacts[0].messages" :class="message.status == 'sent' ? 'inviato' : 'ricevuto' ">
+                                        <span >{{message.message}}</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+
+                            
+                            <div class="row bg-color-grigio posizione">
                                 <div class="col-1 d-flex align-items-center justify-content-end smile-mic">
                                     <i class="fa-regular fa-face-smile" style="color: rgba(107,116,119,255);"></i>
                                 </div>

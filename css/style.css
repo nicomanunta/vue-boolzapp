@@ -18,9 +18,11 @@ body{
 }
 .b{
     background-image:url("../img/mine.jpg");
+    position: relative;
 }
 .altezza-fissa{
    height: 90%;
+   ;
 }
 /* sidebar */
 .immagine-utente{
@@ -74,16 +76,28 @@ li:hover{
 .smile-mic{
     font-size: 20px;
 }
+.posizione{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.inviato{ 
+    position: relative;
+    left: 400px;
+    background-color: rgba(214,249,187,255);
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 10px;
+    max-width: 45%;
+    
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.ricevuto{
+    float: left;
+    background-color: white;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 10px;
+    max-width: 45%;
+    
+}
