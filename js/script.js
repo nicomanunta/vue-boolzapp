@@ -3,7 +3,7 @@ let { createApp } = Vue
 createApp({
     data(){
         return{
-            
+            mess: "",
             newMessage: "",
             activeChat: 0,
             contacts: [
@@ -186,13 +186,14 @@ createApp({
              
         },
         receivedMessage(){
-            setTimeout(function(){
+            this.mess = setTimeout(()=>{
                 this.contacts[this.activeChat].messages.push({
                     date: '',
-                    message: "ok",
+                    message: "ok ok!",
                     status: 'received' 
                 }) 
             },1000)  
         }
+        
     }
 }).mount("#app")

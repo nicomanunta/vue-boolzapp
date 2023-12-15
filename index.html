@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="col-10 my-2">
                                     <div class="input-group ">
-                                        <input v-model="newMessage" type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1" @keyup.enter="sentMessage(), myGreeting()">
+                                        <input v-model="newMessage" type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1" @keyup.enter="sentMessage(), receivedMessage()">
                                     </div>
                                 </div>
                                 <div class="col-1 d-flex align-items-center smile-mic">
