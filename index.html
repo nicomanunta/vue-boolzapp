@@ -81,7 +81,7 @@
                                         <div class="col-10 padding-0">
                                             <div class="pt-2">
                                                 <span class=" align-middle">{{contacts[0].name}}</span> <br>
-                                                <span class="messaggio-sidebar align-middle">Ultimo aceesso alle 12:00</span>
+                                                <span class="messaggio-sidebar align-middle">Ultimo accesso alle {{orario}}</span>
                                             </div>
                                         </div>
                                     </div>    
@@ -102,9 +102,9 @@
                                     <!--v-for="contact, index in contacts" :class="contact.messages[0].message == sent ? 'inviato' : 'ricevuto' -->
                                     <div class="mb-3 p-relative" v-for="message, index in contacts[activeChat].messages" :class="message.status == 'sent' ? 'inviato' : 'ricevuto' ">
                                         <span >{{message.message}}</span>
-                                        <div class="orario-mess">
+                                        <div class="orario-mess" >
                                             <!-- Volevo farlo con "split", ma non ci sono riuscito-->
-                                            {{message.date.slice(10, 16)}}
+                                            {{message.date}}
                                         </div>
                                     </div>
                                     
@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="col-10 my-2">
                                     <div class="input-group ">
-                                        <input v-model="newMessage" type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1" @keyup.enter="sentMessage(), receivedMessage()">
+                                        <input v-model="newMessage" type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1" @keyup.enter=" getNow(), sentMessage(), receivedMessage()">
                                     </div>
                                 </div>
                                 <div class="col-1 d-flex align-items-center smile-mic">

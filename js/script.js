@@ -3,6 +3,7 @@ let { createApp } = Vue
 createApp({
     data(){
         return{
+            orario: "12",
             search: "",
             mess: "",
             newMessage: "",
@@ -178,9 +179,16 @@ createApp({
         selectChat(index){
             this.activeChat = index
         },
+        getNow() {
+            const today = new Date();
+            
+            const time = today.getHours() + ":" + today.getMinutes() 
+            const dateTime =  time;
+            this.orario = dateTime;
+        },
         sentMessage(){
             this.contacts[this.activeChat].messages.push({
-                date: '',
+                date: this.orario,
                 message: this.newMessage,
                 status: 'sent' 
             })
@@ -190,9 +198,10 @@ createApp({
         receivedMessage(){
             this.mess = setTimeout(()=>{
                 this.contacts[this.activeChat].messages.push({
-                    date: '',
+                    date: this.orario,
                     message: "ok ok!",
                     status: 'received' 
+                    
                 }) 
             },1000)  
         },
@@ -208,10 +217,12 @@ createApp({
             });
         },
         addData(){
-            this.contacts[this.activeChat].messages.date.split("")
-            console.log(this.contacts[this.activeChat].messages.date.split("")) 
+            let array = this.contacts[this.activeChat].messages.date.split("")
+            console.log(array) 
              
         },
+
+        
         
         
         
