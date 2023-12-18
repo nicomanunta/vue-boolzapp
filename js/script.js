@@ -3,7 +3,7 @@ let { createApp } = Vue
 createApp({
     data(){
         return{
-            orario: "12",
+            orario: " alle 12",
             search: "",
             mess: "",
             newMessage: "",
@@ -215,6 +215,9 @@ createApp({
                     console.log(element.name)
                 }
             });
+        },
+        removeText(index){
+            this.contacts[this.activeChat].messages.splice(index,1)
         },
      
 

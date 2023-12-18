@@ -81,7 +81,7 @@
                                         <div class="col-10 padding-0">
                                             <div class="pt-2">
                                                 <span class=" align-middle">{{contacts[activeChat].name}}</span> <br>
-                                                <span class="messaggio-sidebar align-middle">Ultimo accesso alle {{orario}}</span>
+                                                <span class="messaggio-sidebar align-middle">Ultimo accesso {{orario.slice(0,16)}}</span>
                                             </div>
                                         </div>
                                     </div>    
@@ -107,11 +107,11 @@
                                             <span class="bg-button">&#9662;</span>
                                             <div class="dropdown-content">
                                                 <a href="#">Info messaggio</a>
-                                                <a href="#">Cancella messaggio</a>
+                                                <a href="#"  @click="removeText(index)">Cancella messaggio</a>
                                             </div>
                                         </div>
                                         <div class="orario-mess" >
-                                            <!-- Volevo farlo con "split", ma non ci sono riuscito-->
+                                           
                                             {{message.date.slice(10,16)}} 
                                         </div>
                                      
