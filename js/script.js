@@ -182,7 +182,7 @@ createApp({
         getNow() {
             const today = new Date();
             
-            const time = today.getHours() + ":" + today.getMinutes() 
+            const time = today.getDate() + "/" + (today.getMonth()+ 1)+ "/" + today.getFullYear() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
             const dateTime =  time;
             this.orario = dateTime;
         },
@@ -216,11 +216,8 @@ createApp({
                 }
             });
         },
-        addData(){
-            let array = this.contacts[this.activeChat].messages.date.split("")
-            console.log(array) 
-             
-        },
+     
+
 
         
         

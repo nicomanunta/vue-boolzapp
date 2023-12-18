@@ -76,11 +76,11 @@
                                 <div class="col-6 altezza">
                                     <div class="row">
                                         <div class="col-2 padding-0 text-center">  
-                                            <img class="w-img align-middle immagine-utente mt-1" :src="contacts[0].avatar" alt="">                                    
+                                            <img class="w-img align-middle immagine-utente mt-1" :src="contacts[activeChat].avatar" alt="">                                    
                                         </div>
                                         <div class="col-10 padding-0">
                                             <div class="pt-2">
-                                                <span class=" align-middle">{{contacts[0].name}}</span> <br>
+                                                <span class=" align-middle">{{contacts[activeChat].name}}</span> <br>
                                                 <span class="messaggio-sidebar align-middle">Ultimo accesso alle {{orario}}</span>
                                             </div>
                                         </div>
@@ -100,12 +100,21 @@
                             <div class="row">
                                 <div class="col-12 mt-5  ">
                                     <!--v-for="contact, index in contacts" :class="contact.messages[0].message == sent ? 'inviato' : 'ricevuto' -->
-                                    <div class="mb-3 p-relative" v-for="message, index in contacts[activeChat].messages" :class="message.status == 'sent' ? 'inviato' : 'ricevuto' ">
-                                        <span >{{message.message}}</span>
+                                    <div class="hover-drop mb-3 p-relative" v-for="message, index in contacts[activeChat].messages" :class="message.status == 'sent' ? 'inviato' : 'ricevuto' ">
+                                        <span class="pe-5">{{message.message}} 
+                                        </span>
+                                        <div class="dropdown text-start">
+                                            <span class="bg-button">&#9662;</span>
+                                            <div class="dropdown-content">
+                                                <a href="#">Info messaggio</a>
+                                                <a href="#">Cancella messaggio</a>
+                                            </div>
+                                        </div>
                                         <div class="orario-mess" >
                                             <!-- Volevo farlo con "split", ma non ci sono riuscito-->
-                                            {{message.date}}
+                                            {{message.date.slice(10,16)}} 
                                         </div>
+                                     
                                     </div>
                                     
                                 </div>

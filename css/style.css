@@ -87,7 +87,7 @@ li:hover{
     float: right;
     background-color: rgba(214,249,187,255);
     padding: 10px;
-    padding-right: 50px;
+    padding-right: 10px;
     border-radius: 10px;
     max-width: 45%;
     
@@ -98,7 +98,7 @@ li:hover{
     float: left;
     background-color: white;
     padding: 10px;
-    padding-right: 50px;
+    padding-right: 10px;
     border-radius: 10px;
     max-width: 45%;
     
@@ -115,4 +115,46 @@ li:hover{
 }
 
 
+
+
+
+
+
+
+
+
+
+  .dropdown {
+    position: relative;
+    display: none;
+  }
+  .hover-drop:hover .dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 35px;
+    right: -8px;
+  }
+  
+  .dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+ 
 
