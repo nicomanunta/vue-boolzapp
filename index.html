@@ -100,9 +100,10 @@
                             <div class="row">
                                 <div class="col-12 mt-5  ">
                                     <!--v-for="contact, index in contacts" :class="contact.messages[0].message == sent ? 'inviato' : 'ricevuto' -->
-                                    <div class="mb-3" v-for="message, index in contacts[activeChat].messages" :class="message.status == 'sent' ? 'inviato' : 'ricevuto' ">
+                                    <div class="mb-3 p-relative" v-for="message, index in contacts[activeChat].messages" :class="message.status == 'sent' ? 'inviato' : 'ricevuto' ">
                                         <span >{{message.message}}</span>
                                         <div class="orario-mess">
+                                            <!-- Volevo farlo con "split", ma non ci sono riuscito-->
                                             {{message.date.slice(10, 16)}}
                                         </div>
                                     </div>

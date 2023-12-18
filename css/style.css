@@ -22,9 +22,9 @@ body{
 }
 .altezza-fissa{
    height: 90%;
-   ;
+   
 }
-/* sidebar */
+/* pagina sinistra */
 .immagine-utente{
     border-radius: 50px;
 }
@@ -64,6 +64,7 @@ body{
 li:hover{
     background-color: rgba(182, 182, 182, 0.486);
 }
+/* pagina destra */
 .altezza{
     height: 61px;
 }
@@ -103,9 +104,14 @@ li:hover{
     
 }
 .orario-mess{
+    position: absolute;
+    right: 10px;
+    font-size: 8px;
+    bottom: 2px;
+    color: grey;
+}
+.p-relative{
+    position: relative;
+}
 
-}
-.display{
-    display: flex;
-}
 
